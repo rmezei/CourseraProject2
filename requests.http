@@ -1,0 +1,82 @@
+
+#################################### WITH TOKENS ####################################
+### Retrieve a list of users
+GET http://localhost:5000/api/user
+Authorization: Bearer simple-token
+
+### Retrieve a specific user by ID
+GET http://localhost:5000/api/user/1
+Authorization: Bearer simple-token
+
+### Add a new user
+POST http://localhost:5000/api/user
+Content-Type: application/json
+Authorization: Bearer simple-token
+
+{
+  "firstName": "John",
+  "lastName": "Doe",
+  "email": "john.doe@example.com",
+  "dateOfBirth": "1990-01-01T00:00:00"
+}
+
+### Update an existing user's details
+PUT http://localhost:5000/api/user/1
+Content-Type: application/json
+Authorization: Bearer simple-token
+
+{
+  "firstName": "Jane",
+  "lastName": "Doe",
+  "email": "jane.doe@example.com",
+  "dateOfBirth": "1992-02-02T00:00:00"
+}
+
+### Remove a user by ID
+DELETE http://localhost:5000/api/user/1
+Authorization: Bearer simple-token
+
+
+#################################### WITHOUT TOKENS ####################################
+### Retrieve a list of users
+GET http://localhost:5000/api/user
+
+### Retrieve a specific user by ID
+GET http://localhost:5000/api/user/1
+
+### Add a new user
+POST http://localhost:5000/api/user
+Content-Type: application/json
+
+{
+  "firstName": "John",
+  "lastName": "Doe",
+  "email": "john.doe@example.com",
+  "dateOfBirth": "1990-01-01T00:00:00"
+}
+
+### Update an existing user's details
+PUT http://localhost:5000/api/user/1
+Content-Type: application/json
+
+{
+  "firstName": "Jane",
+  "lastName": "Doe",
+  "email": "jane.doe@example.com",
+  "dateOfBirth": "1992-02-02T00:00:00"
+}
+### Update an existing user's details
+PUT http://localhost:5000/api/user/1
+Content-Type: application/json
+
+{
+  "firstName": ""
+  "lastName": "Doe",
+  "email": "jane.doe@example.com",
+  "dateOfBirth": "1992-02-02T00:00:00"
+}
+
+### Remove a user by ID
+DELETE http://localhost:5000/api/user/1
+
+
